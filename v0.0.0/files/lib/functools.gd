@@ -1,4 +1,4 @@
 var _methods = {"bind": bind}
 
 func bind(callback, ...values):
-    return callback.bindv(values)
+    return func(args): return callback.call(...values + args)
