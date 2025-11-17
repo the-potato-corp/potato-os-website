@@ -23,7 +23,7 @@ body {
 	background: var(--background-primary);
 	
 	color: var(--text-primary);
-	font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: "IBM Plex Sans", sans-serif;
 
 }
 
