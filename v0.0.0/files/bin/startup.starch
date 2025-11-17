@@ -1,8 +1,6 @@
 using gui;
 using functools;
 
-print("String slicing: " ~ "Hello, World!"[0:-1]);
-
 var window = gui.Window();
 window.title("Calculator");
 
