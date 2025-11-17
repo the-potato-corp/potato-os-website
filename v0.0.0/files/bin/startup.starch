@@ -1,7 +1,7 @@
 using gui;
 using functools;
 
-print("String slicing with negative index: " ~ "Hello, World!"[:-1]);
+print("String slicing: " ~ "Hello, World!"[7:]);
 
 var window = gui.Window();
 window.title("Calculator");
