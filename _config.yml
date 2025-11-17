@@ -1,3 +1,8 @@
 include:
-  - docs/_sources
+  - docs
+  - _static
+  - _sources
+
+keep_files:
   - docs/_static
+  - docs/_sources

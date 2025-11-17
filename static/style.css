@@ -85,3 +85,13 @@ h2, h4 {
 }
 h2 { color: var(--accent-primary) }
 h4 { color: var(--accent-secondary) }
+
+footer {
+	background: var(--accent-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	color: black;
+}
+
