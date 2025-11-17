@@ -1,10 +1,35 @@
-using functools;
+using gui;
 
-function print_text(text¹, text², text³) {
-	print("IS ANYTHING FRICKING HAPPENING OR WHAT");
-	print(text¹ ~ text² ~ text³);
+var window = gui.Window();
+window.title("Calculator");
+
+// Main container
+var layout = gui.FlexBox()
+	~> .fill()
+	~> .direction("vertical");
+window.add_content(layout);
+
+// Display
+var display = gui.Text()
+	~> .height(100)
+	~> .text("0");
+layout.add(display);
+
+// Buttons
+var buttons = gui.Grid()
+	~> .expand(true)
+	~> .columns(4);
+layout.add(buttons);
+
+function calc_button(label: str, callback: function) -> gui.Button {
+	return gui.Button()
+		~> .expand(true)
+		~> .text(label)
+		~> .on_click(callback);
 }
 
-var new = functools.bind(print_text, "hello", ", ");
-print(new);
-new("world!");
+function clear() { display.text(""); }
+function lbrace() { display.text(display.get_text() ~ "(") }
+
+buttons.add(calc_button("AC", clear));
+buttons.add(calc_button("(", lbrace));
