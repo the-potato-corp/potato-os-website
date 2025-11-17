@@ -1,4 +1,5 @@
 using gui;
+using bind from functools;
 
 var window = gui.Window();
 window.title("Calculator");
@@ -28,8 +29,39 @@ function calc_button(label: str, callback: function) -> gui.Button {
 		~> .on_click(callback);
 }
 
+function new_button(text: str) -> gui.Button {
+	return calc_button(text, bind(append, text))
+}
+
 function clear() { display.text(""); }
-function lbrace() { display.text(display.get_text() ~ "(") }
+function append(text) { display.text(display.get_text() ~ text) }
+function backspace() { display.text(display.get_text()[:-1]) }
+function solve() {}
+
+/* LAYOUT
+AC, (, ), /
+7, 8, 9, *
+4, 5, 6, -
+1, 2, 3, +
+0, ., <-, = */
 
 buttons.add(calc_button("AC", clear));
-buttons.add(calc_button("(", lbrace));
+buttons.add(new_button("("));
+buttons.add(new_button(")"));
+buttons.add(new_button("/"));
+buttons.add(new_button("7"));
+buttons.add(new_button("8"));
+buttons.add(new_button("9"));
+buttons.add(new_button("*"));
+buttons.add(new_button("4"));
+buttons.add(new_button("5"));
+buttons.add(new_button("6"));
+buttons.add(new_button("-"));
+buttons.add(new_button("1"));
+buttons.add(new_button("2"));
+buttons.add(new_button("3"));
+buttons.add(new_button("+"));
+buttons.add(new_button("0"));
+buttons.add(new_button("."));
+buttons.add(calc_button("⌫", backspace));
+buttons.add(calc_button("=", solve));
