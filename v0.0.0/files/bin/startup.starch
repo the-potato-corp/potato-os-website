@@ -36,7 +36,7 @@ function new_button(text: str) -> gui.Button {
 function clear() { display.text(""); }
 function append(text) { display.text(display.get_text() ~ text); }
 function backspace() { display.text(display.get_text()[:-1]); }
-function solve() {}
+function solve() { display.text(eval(display.get_text())); }
 
 /* LAYOUT
 AC, (, ), /
