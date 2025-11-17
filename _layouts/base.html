@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>{% if page.title %}{{ page.title }} - {% endif %}PotatoOS</title>
+		<link rel="stylesheet" href="/static/theme.css">
+		<link rel="stylesheet" href="/static/style.css"> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="wordmark">
+				<h1>PotatoOS</h1>
+			</div>
+			<nav>
+				<a href="https://google.com">Google</a>
+				<a href="https://google.com">Google</a>
+				<a href="https://google.com">Google</a>
+				<a href="https://google.com">Google</a>
+			</nav>
+		</header>
+		<main>
+            {{ content }}
+        </main>
+	</body>
+</html>
