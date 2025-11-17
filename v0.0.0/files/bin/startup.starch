@@ -46,22 +46,9 @@ AC, (, ), /
 0, ., <-, = */
 
 buttons.add(calc_button("AC", clear));
-buttons.add(new_button("("));
-buttons.add(new_button(")"));
-buttons.add(new_button("/"));
-buttons.add(new_button("7"));
-buttons.add(new_button("8"));
-buttons.add(new_button("9"));
-buttons.add(new_button("*"));
-buttons.add(new_button("4"));
-buttons.add(new_button("5"));
-buttons.add(new_button("6"));
-buttons.add(new_button("-"));
-buttons.add(new_button("1"));
-buttons.add(new_button("2"));
-buttons.add(new_button("3"));
-buttons.add(new_button("+"));
-buttons.add(new_button("0"));
-buttons.add(new_button("."));
+var chars = "()/789*456-123+0.";
+for c in chars {
+	buttons.add(new_button(c));
+}
 buttons.add(calc_button("⌫", backspace));
 buttons.add(calc_button("=", solve));
