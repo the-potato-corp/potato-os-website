@@ -39,4 +39,6 @@ button, a.button {
 	background: var(--accent-secondary);
 	cursor: pointer;
 	padding: 8px;
+	text-decoration: none;
+	color: inherit;
 }
