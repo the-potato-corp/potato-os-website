@@ -33,7 +33,7 @@ body {
 	box-sizing: border-box;
 }
 
-button {
+button, a.button {
 	border: none;
 	border-radius: 8px;
 	background: var(--accent-secondary);
