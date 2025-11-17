@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <title>{% if page.title %}{{ page.title }} - {% endif %}PotatoOS</title>
+		<title>{% if page.title %}{{ page.title }} - {% endif %}PotatoOS</title>
 		<link rel="stylesheet" href="/static/theme.css">
 		<link rel="stylesheet" href="/static/style.css"> 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,20 @@
 			</nav>
 		</header>
 		<main>
-            {{ content }}
-        </main>
+			{{ content }}
+		</main>
+		<footer>
+			<!--<div class="socials">
+				<a href="https://github.com/the-potato-corp">GitHub</a>
+			</div>-->
+			<p>&copy; 2025<span id="currentYear"></span> the Potato Corporation. All rights reserved.</p>
+		</footer>
+		<script>
+			const elem = document.getElementById("currentYear");
+			const year = new Date().getFullYear();
+			if (year > 2025) {
+				elem.innerText = "–" /* EN DASH */ + year;
+			}
+		</script>
 	</body>
 </html>
