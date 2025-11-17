@@ -30,12 +30,12 @@ function calc_button(label: str, callback: function) -> gui.Button {
 }
 
 function new_button(text: str) -> gui.Button {
-	return calc_button(text, bind(append, text))
+	return calc_button(text, bind(append, text));
 }
 
 function clear() { display.text(""); }
-function append(text) { display.text(display.get_text() ~ text) }
-function backspace() { display.text(display.get_text()[:-1]) }
+function append(text) { display.text(display.get_text() ~ text); }
+function backspace() { display.text(display.get_text()[:-1]); }
 function solve() {}
 
 /* LAYOUT
