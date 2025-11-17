@@ -7,7 +7,7 @@ section.hero {
 .hero .intro {
 	flex: 1;
 	padding: 20px;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 .hero .intro h1 { font-size: 2.3rem; }
@@ -26,8 +26,10 @@ section.hero {
 	width: 100%;
 }
 
-.actions button {
+.actions button,
+.actions a {
 	flex: 1;
+	text-align: center;
 }
 
 .hero .showcase {
