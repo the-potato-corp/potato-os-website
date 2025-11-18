@@ -1,7 +1,7 @@
 using gui;
 using functools;
 
-print("UPPERCASE TEST: " ~ upper("hello WorLD"))
+print("UPPERCASE TEST: " ~ upper("hello WorLD"));
 
 var window = gui.Window();
 window.title("Calculator");
