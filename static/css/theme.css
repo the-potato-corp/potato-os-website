@@ -14,7 +14,7 @@
 	--text-tertiary: #a89680;
 
 	--border: #4a3d35;
-	--shadow: rgba(0, 0, 0, 0.3);
+	--shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 body {
