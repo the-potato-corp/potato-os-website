@@ -65,6 +65,11 @@ header .wordmark {
 	font-size: 1.3rem;
 }
 
+header .wordmark a {
+	text-decoration: none;
+	color: inherit;
+}
+
 header nav {
 	display: flex;
 	gap: 20px;

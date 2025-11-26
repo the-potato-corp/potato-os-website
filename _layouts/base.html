@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<title>{% if page.title %}{{ page.title }} - {% endif %}PotatoOS</title>
-		<link rel="stylesheet" href="/static/theme.css">
+		<link rel="stylesheet" href="/static/css/theme.css">
 		{% if page.stylesheet %}
-			<link rel="stylesheet" href="{{ page.stylesheet }}">
+			<link rel="stylesheet" href="/static/css/{{ page.stylesheet }}">
 		{% endif %}
 
 		<!-- Google Fonts -->
@@ -15,10 +15,10 @@
 	<body>
 		<header>
 			<div class="wordmark">
-				<h1>PotatoOS</h1>
+				<h1><a href="/">PotatoOS</a></h1>
 			</div>
 			<nav>
-				<a href="https://google.com">Google</a>
+				<a href="/about">About</a>
 				<a href="https://google.com">Google</a>
 				<a href="https://google.com">Google</a>
 				<a href="https://google.com">Google</a>
