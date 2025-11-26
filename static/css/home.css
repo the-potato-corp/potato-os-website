@@ -42,30 +42,6 @@ section.hero {
 	vertical-align: middle;
 }
 
-header {
-	background: var(--accent-secondary);
-	padding: 10px 20px;
-	color: black;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-header .wordmark {
-	font-size: 1.3rem;
-}
-
-header nav {
-	display: flex;
-	gap: 20px;
-	font-size: 1.1rem;
-}
-
-header nav a {
-	color: black;
-	text-decoration: none;
-}
-
 .features {
 	padding: 20px;
 	display: grid;
@@ -85,13 +61,3 @@ h2, h4 {
 }
 h2 { color: var(--accent-primary) }
 h4 { color: var(--accent-secondary) }
-
-footer {
-	background: var(--accent-primary);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1rem;
-	color: black;
-}
-

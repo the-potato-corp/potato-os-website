@@ -42,3 +42,36 @@ button, a.button {
 	text-decoration: none;
 	color: inherit;
 }
+
+footer {
+	background: var(--accent-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	color: black;
+}
+
+header {
+	background: var(--accent-secondary);
+	padding: 10px 20px;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .wordmark {
+	font-size: 1.3rem;
+}
+
+header nav {
+	display: flex;
+	gap: 20px;
+	font-size: 1.1rem;
+}
+
+header nav a {
+	color: black;
+	text-decoration: none;
+}

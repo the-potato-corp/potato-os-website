@@ -3,7 +3,11 @@
 	<head>
 		<title>{% if page.title %}{{ page.title }} - {% endif %}PotatoOS</title>
 		<link rel="stylesheet" href="/static/theme.css">
-		<link rel="stylesheet" href="/static/style.css"> 
+		{% if page.stylesheet %}
+			<link rel="stylesheet" href="{{ page.stylesheet }}">
+		{% endif %}
+
+		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
