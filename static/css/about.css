@@ -53,3 +53,69 @@
 .cell {
 	padding: 8px;
 }
+
+.learn {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 50px;
+	padding: 20px 10%;
+}
+
+.learn .button {
+	flex: 1;
+}
+
+.cta {
+	margin-top: 20px;
+}
+
+.who-graphic {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5%;
+}
+
+.who-graphic aside {
+	background: var(--background-secondary);
+	height: 300px;
+	border-radius: 8px;
+	border: var(--border) solid 2px;
+	padding: 20px;
+	transition: opacity ease-in 0.3s;
+	width: 200px;
+	opacity: 0;
+}
+
+/* Cool hover effect using only CSS */
+.who-graphic aside > div { display: none; }
+.who-graphic:has(li:hover, li:focus) aside { opacity: 1; }
+.who-graphic:has(li.developers:hover, li.developers:focus) aside div.developers { display: block; }
+.who-graphic:has(li.learners:hover, li.learners:focus) aside div.learners { display: block; }
+.who-graphic:has(li.hobbyists:hover, li.hobbyists:focus) aside div.hobbyists { display: block; }
+
+ul.circular {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	list-style: none;
+	margin: 50px;
+	border: var(--border) solid 3px;
+	border-radius: 50%;
+}
+
+ul.circular li {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(calc(var(--item) * 120deg)) translateY(-150px) rotate(calc(var(--item) * -120deg));
+	background: var(--accent-primary);
+	border-radius: 8px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+ul.circular li:nth-child(1) { --item: 1; }
+ul.circular li:nth-child(2) { --item: 2; }
+ul.circular li:nth-child(3) { --item: 3; }
