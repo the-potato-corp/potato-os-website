@@ -88,3 +88,26 @@ ul, ol, li {
 a {
 	color: var(--text-secondary);
 }
+
+.menu-dropdown {
+	display: none;
+	position: absolute;
+	top: 30px;
+	background: var(--accent-tertiary);
+	border: var(--border) solid 1px;
+	border-radius: 8px;
+	list-style-type: none;
+	padding: 10px;
+}
+.menu-dropdown a { color: var(--text-primary); }
+nav .menu::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 30px;
+}
+nav .menu { position: relative; }
+nav .menu:hover .menu-dropdown,
+nav .menu:focus-within .menu-dropdown { display: block; }
