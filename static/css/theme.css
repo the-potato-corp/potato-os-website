@@ -84,3 +84,7 @@ header nav a {
 ul, ol, li {
 	padding: revert;
 }
+
+a {
+	color: var(--text-secondary);
+}
