@@ -1,0 +1,27 @@
+---
+layout: base
+title: 404 Page Not Found
+stylesheet: 404.css
+---
+
+<div class="text">
+	<h1>404</h1>
+	<h3>Page not found</h3>
+	<p>There's nothing here :(</p>
+	<a class="button" href="/">Home</a>
+</div>
+<pre><code><span class="user">website@potatoos</span>: <span class="path">~</span> $ cd '<span class="route">/404</span>'
+Error: file not found
+File '<span class="route">/404</span>' does not exist in PotatoFS
+
+<span class="user">website@potatoos</span>: <span class="path">~</span> $ ls
+<a href="/">home</a>    <a href="/docs">docs/</a>    <a href="/about">about</a>
+
+<span class="user">website@potatoos</span>: <span class="path">~</span> $ <span class="cursor">_</span>
+</code></pre>
+
+<script>
+	document.querySelectorAll(".route").forEach((i) => {
+		i.innerText = decodeURI(window.location.pathname);
+	});
+</script>

@@ -18,13 +18,17 @@
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	background: var(--background-primary);
 	
 	color: var(--text-primary);
 	font-family: "IBM Plex Sans", sans-serif;
+}
 
+main {
+	flex: 1;
 }
 
 * {
