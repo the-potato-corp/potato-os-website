@@ -39,5 +39,10 @@
 	height: 100px;
 	width: 100%;
 	padding: 10px;
+	border-radius: 8px;
 	background: var(--accent-tertiary);
+}
+
+.structure {
+	padding: 10px;
 }
