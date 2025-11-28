@@ -1,0 +1,32 @@
+---
+layout: base
+title: Architecture
+stylesheet: architecture.css
+---
+<section class="hero">
+	<h1>System Architecture</h1>
+	<h3>How does PotatoOS actually work?</h3>
+</section>
+<section class="structure">
+	<h2>The Four-Layer Stack</h2>
+	<p>PotatoOS operates as a layered system, with each level handling specific responsibilities. Data flows from the user down through STARCH, into Godot, and finally to your host operating system.</p>
+	
+	<ul>
+		<li>
+			<h3>Host Operating System</h3>
+			<p>The foundation layer — your actual OS (Windows, macOS, or Linux). It handles all the hardware stuff PotatoOS doesn't: device drivers, kernel operations, memory management, and networking. PotatoOS leverages these services without reimplementing them.</p>
+		</li>
+		<li>
+			<h3>Godot Runtime</h3>
+			<p>The container that PotatoOS lives in. Godot acts as a virtual kernel, managing graphics rendering, threading, user input, and windowing. It provides the sandboxed environment that makes PotatoOS portable across platforms whilst isolating it from direct hardware access.</p>
+		</li>
+		<li>
+			<h3>STARCH Interpreter & Core System</h3>
+			<p>The engine of PotatoOS. This layer includes the STARCH interpreter (built in GDScript/C), core libraries, the window manager, and system APIs. All PotatoOS logic runs here; when you execute a STARCH script, this is where it happens.</p>
+		</li>
+		<li>
+			<h3>User Experience Layer</h3>
+			<p>What you actually interact with: the Mash shell (command-line interface), file browser, text editor, and all bundled applications. Everything here is written in STARCH and communicates with the core system through well-defined APIs.</p>
+		</li>
+	</ul>
+</section>
