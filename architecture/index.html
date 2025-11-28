@@ -30,3 +30,64 @@ stylesheet: architecture.css
 		</li>
 	</ul>
 </section>
+<section class="potatofs">
+	<h2>PotatoFS</h2>
+	<p>PotatoFS is the file system that powers PotatoOS. It's located in your program data folder (<code>%APPDATA%\PotatoCorp\PotatoOS\potatofs</code> on Windows or <code>$HOME/PotatoCorp/PotatoOS/potatofs</code>) and contains the files for both the system and user data. It's split up into two directories:</p>
+
+	<div class="fs-diagram">
+		<div>
+			<h3><code>/system</code></h3>
+			<div class="directory">
+				system/
+				<ul>
+					<li>assets</li>
+					<li>app</li>
+					<li>bin</li>
+					<li>etc</li>
+					<li>host</li>
+					<li>lib</li>
+				</ul>
+			</div>
+
+			<p>The system folder contains all system files and is generally read-only.</p>
+			<ul>
+				<li><code><b>assets</b></code> is used for system assets such as icons.</li>
+				<li><code><b>app</b></code> stores pre-installed and system-wide apps.</li>
+				<li><code><b>bin</b></code> has core essential STARCH scripts and the Mash binary.</li>
+				<li><code><b>etc</b></code> stores configuration files.</li>
+				<li><code><b>host</b></code> stores binaries for communicating with the host OS.</li>
+				<li><code><b>lib</b></code> stores common libraries and modules for STARCH use.</li>
+			</ul>
+		</div>
+		<div>
+			<h3><code>/users</code></h3>
+			<div class="directory">
+				users/
+				<ul>
+					<li>bob/
+						<ul>
+							<li>documents/</li>
+							<li>downloads/</li>
+							<li>media/</li>
+						</ul>
+					</li>
+					<li>alice/
+						<ul>
+							<li>documents/</li>
+							<li>downloads/</li>
+							<li>media/</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<p>The users folder contains all user data, split for each user.</p>
+			<ul>
+				<li><code><b>[username]</b></code> is the home directory for the user, and includes user-specific configuration.</li>
+				<li><code><b>[username]/documents</b></code> can be used for storing documents and code.</li>
+				<li><code><b>[username]/downloads</b></code> is the default download location.</li>
+				<li><code><b>[username]/media</b></code> can be used for storing images and videos.</li>
+			</ul>
+		</div>
+	</div>
+</section>

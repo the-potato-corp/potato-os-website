@@ -43,6 +43,48 @@
 	background: var(--accent-tertiary);
 }
 
-.structure {
+section {
 	padding: 10px;
+}
+
+.fs-diagram {
+	padding: 10px;
+	display: flex;
+	gap: 20px;
+}
+
+.fs-diagram > div {
+	flex: 1;
+	background: var(--background-tertiary);
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.fs-diagram h3 {
+	font-size: 1.2rem;
+}
+
+/* css wizardry */
+
+.directory {
+	font-family: monospace;
+	padding: 10px;
+}
+
+.directory li::marker {
+	content: "├───";
+}
+
+.directory li:last-child::marker {
+	content: "└───";
+}
+
+.directory li:not(.directory > ul > li) {
+	position: relative;
+}
+
+.directory li:not(.directory > ul > li):not(.directory > ul > li:last-child li)::before {
+	content: "│";
+	position: absolute;
+	left: -9.6ch;
 }
